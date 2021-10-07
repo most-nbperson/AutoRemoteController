@@ -14,7 +14,7 @@ void setup() {
 
 void loop() {
 // write your code here
-    Serial.printf("hello world");
+    Serial.printf("hello world\n");
     oled.showString(0, 0, (unsigned char *) "hello", 8);
     delay(100);
 }
