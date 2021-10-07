@@ -30,4 +30,6 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-add_executable(Z_DUMMY_TARGET ${SRC_LIST} src/key.c include/key.h src/display.c include/display.h)
+add_executable(Z_DUMMY_TARGET ${SRC_LIST}
+                src/key.c       include/key.h
+        src/i2c.cpp include/i2c.h src/ssd1306.cpp include/ssd1306.h src/key.cpp)

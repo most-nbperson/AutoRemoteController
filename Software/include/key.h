@@ -3,9 +3,6 @@
 
 #include "Arduino.h"
 
-void keyInit();
-enum EncoderValue ketGetEncoderValue();
-
 enum KeyReadPort
 {
     PORT_0 = 16,
@@ -36,5 +33,9 @@ enum EncoderValue
     __110,
     __111,
 };
+
+void keyInit();
+enum EncoderValue ketGetEncoderValue();
+
 
 #endif //SOFTWARE_KEY_H
