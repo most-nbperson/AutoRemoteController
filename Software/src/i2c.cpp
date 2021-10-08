@@ -1,6 +1,6 @@
 #include "i2c.h"
 
-I2C::I2C(unsigned char scl, unsigned char sda) : sclPin{scl}, sdaPin{sda}
+I2C::I2C(uint16_t scl, uint16_t sda) : sclPin{scl}, sdaPin{sda}
 {
     pinMode(this->sdaPin, OUTPUT);
     pinMode(this->sclPin, OUTPUT);
@@ -46,7 +46,7 @@ void I2C::waitAck()
     sclkClr();
 }
 
-void I2C::writeByte(unsigned char data)
+void I2C::writeByte(uint8_t data)
 {
     unsigned char m,da;
     da = data;

@@ -1,6 +1,6 @@
 #include "ssd1306.h"
 
-SSD1306::SSD1306(unsigned char sda, unsigned char scl)
+SSD1306::SSD1306(uint16_t sda, uint16_t scl)
 {
     i2cDev = new I2C{scl, sda};
     
@@ -40,7 +40,12 @@ SSD1306::SSD1306(unsigned char sda, unsigned char scl)
     writeByte(0xAF,OLED_CMD);//--turn on oled panel
 }
 
-void SSD1306::writeCommand(unsigned char cmd)
+SSD1306::~SSD1306()
+{
+    delete i2cDev;
+}
+
+void SSD1306::writeCommand(uint8_t cmd)
 {
     i2cDev->start();
     i2cDev->writeByte(0x78);  //Slave address,SA0=0
@@ -52,7 +57,7 @@ void SSD1306::writeCommand(unsigned char cmd)
     i2cDev->stop();
 }
 
-void SSD1306::writeData(unsigned char data)
+void SSD1306::writeData(uint8_t data)
 {
     i2cDev->start();
     i2cDev->writeByte(0x78);
@@ -64,7 +69,7 @@ void SSD1306::writeData(unsigned char data)
     i2cDev->stop();
 }
 
-void SSD1306::writeByte(unsigned char dat, unsigned char flag)
+void SSD1306::writeByte(uint8_t dat, uint8_t flag)
 {
     if(flag)
         writeData(dat);
@@ -86,7 +91,7 @@ void SSD1306::displayOff()
     writeByte(0XAE, OLED_CMD);  //DISPLAY OFF
 }
 
-void SSD1306::displayClear(unsigned char dat)
+void SSD1306::displayClear(uint8_t dat)
 {
     for(int i = 0; i < 8; i++)
     {
@@ -98,14 +103,14 @@ void SSD1306::displayClear(unsigned char dat)
     } //更新显示
 }
 
-void SSD1306::setPos(unsigned char x, unsigned char y)
+void SSD1306::setPos(uint8_t x, uint8_t y)
 {
     writeByte(0xb0 + y, OLED_CMD);
     writeByte(((x & 0xf0) >> 4) | 0x10, OLED_CMD);
     writeByte((x & 0x0f), OLED_CMD);
 }
 
-void SSD1306::showChar(unsigned char x, unsigned char y, unsigned char chr, unsigned char charSize)
+void SSD1306::showChar(uint8_t x, uint8_t y, uint8_t chr, uint8_t charSize)
 {
     unsigned char c = 0;
     c = chr - ' ';//得到偏移后的值
@@ -132,7 +137,7 @@ void SSD1306::showChar(unsigned char x, unsigned char y, unsigned char chr, unsi
     }
 }
 
-void SSD1306::showString(unsigned char x, unsigned char y, unsigned char *p, unsigned char charSize)
+void SSD1306::showString(uint8_t x, uint8_t y, uint8_t*p, uint8_t charSize)
 {
     unsigned char i = 0;
     while (p[i] != '\0')

@@ -3,30 +3,41 @@
 
 #include "Arduino.h"
 
+enum PortStatus {
+    LLL,
+    LLH,
+    LHL,
+    LHH,
+    HLL,
+    HLH,
+    HHL,
+    HHH,
+};
+
+enum KeyName {
+    KEY1,
+    KEY2,
+    KEY3,
+    KEY4,
+    KEY5,
+    KEY6,
+    KEY7,
+    KEY8,
+    NONE_KEY
+};
+
 class Key {
 private:
-    enum KeyReadPort
-    {
-        PORT_0 = 16,
-        PORT_1 = 2,
-        PORT_2 = 4,
-    };
+    uint16_t readPort1;
+    uint16_t readPort2;
+    uint16_t readPort3;
 
-    enum KeyName
-    {
-        KEY1,
-        KEY2,
-        KEY3,
-        KEY4,
-        KEY5,
-        KEY6,
-        KEY7,
-        KEY8,
-    };
+    uint16_t readPort(uint16_t port);
+    PortStatus readPorts();
 
 public:
-    Key();
-
+    Key(uint16_t port1, uint16_t port2, uint16_t port3);
+    KeyName getKey();
 };
 
 

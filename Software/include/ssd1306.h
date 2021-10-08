@@ -4,8 +4,7 @@
 #include "Arduino.h"
 #include "i2c.h"
 
-const unsigned char F6x8[][6] =
-        {
+const unsigned char F6x8[][6] = {
                 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,// sp
                 0x00, 0x00, 0x00, 0x2f, 0x00, 0x00,// !
                 0x00, 0x00, 0x07, 0x00, 0x07, 0x00,// "
@@ -99,9 +98,8 @@ const unsigned char F6x8[][6] =
                 0x00, 0x44, 0x64, 0x54, 0x4C, 0x44,// z
                 0x14, 0x14, 0x14, 0x14, 0x14, 0x14,// horiz lines
         };
-/****************************************8*16的点阵************************************/
-const unsigned char F8X16[]=
-        {
+
+const unsigned char F8X16[] = {
                 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,// 0
                 0x00,0x00,0x00,0xF8,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x33,0x30,0x00,0x00,0x00,//! 1
                 0x00,0x10,0x0C,0x06,0x10,0x0C,0x06,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,//" 2
@@ -203,30 +201,31 @@ class SSD1306 {
 private:
     I2C* i2cDev;
 
-    const char OLED_MODE = 0;
-    const char SIZE = 8;
-    const char XLevelL = 0x00;
-    const char XLevelH = 0x10;
-    const char Max_Column = 128;
-    const char Max_Row = 64;
-    const char Brightness = 0xFF;
-    const char X_WIDTH = 128;
-    const char Y_WIDTH = 64;
-    const char OLED_CMD = 0;  //写命令
-    const char OLED_DATA = 1;  //写数据
+    const uint8_t OLED_MODE = 0;
+    const uint8_t SIZE = 8;
+    const uint8_t XLevelL = 0x00;
+    const uint8_t XLevelH = 0x10;
+    const uint8_t Max_Column = 128;
+    const uint8_t Max_Row = 64;
+    const uint8_t Brightness = 0xFF;
+    const uint8_t X_WIDTH = 128;
+    const uint8_t Y_WIDTH = 64;
+    const uint8_t OLED_CMD = 0;  //写命令
+    const uint8_t OLED_DATA = 1;  //写数据
 
-    void writeCommand(unsigned char cmd);
-    void writeData(unsigned char data);
-    void writeByte(unsigned char dat, unsigned char flag);
+    void writeCommand(uint8_t cmd);
+    void writeData(uint8_t data);
+    void writeByte(uint8_t dat, uint8_t flag);
 
 public:
-    SSD1306(unsigned char sda, unsigned char scl);
+    SSD1306(uint16_t sda, uint16_t scl);
+    ~SSD1306();
     void displayOn(void);
     void displayOff(void);
-    void displayClear(unsigned char dat);
-    void setPos(unsigned char x, unsigned char y);
-    void showChar(unsigned char x, unsigned char y, unsigned char chr, unsigned char charSize);
-    void showString(unsigned char x, unsigned char y, unsigned char *p, unsigned char charSize);
+    void displayClear(uint8_t dat);
+    void setPos(uint8_t x, uint8_t y);
+    void showChar(uint8_t x, uint8_t y, uint8_t chr, uint8_t charSize);
+    void showString(uint8_t x, uint8_t y, uint8_t *p, uint8_t charSize);
 };
 
 #endif //SOFTWARE_SSD1306_H

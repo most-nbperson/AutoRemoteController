@@ -5,19 +5,19 @@
 
 class I2C {
 private:
-    unsigned char sclPin;
-    unsigned char sdaPin;
+    uint16_t sclPin;
+    uint16_t sdaPin;
 
     const void sclkClr();
     const void sclkSet();
     const void sdinClr();
     const void sdinSet();
 public:
-    I2C(unsigned char scl, unsigned char sda);
+    I2C(uint16_t scl, uint16_t sda);
     void start();
     void stop();
     void waitAck();
-    void writeByte(unsigned char data);
+    void writeByte(uint8_t data);
 };
 
 #endif //SOFTWARE_I2C_H
