@@ -3,20 +3,21 @@
 IR::IR(uint16_t recv, uint16_t trans, uint16_t captureBuff, uint8_t timeout, uint16_t frequency) :
         irRecvPin{recv}, irTransPin{trans}, irCaptureBufferSize{captureBuff}, irTimeout{timeout}, irFrequency{frequency}
 {
-    irsend = new IRsend{this->irTransPin};
-    irrecv = new IRrecv{this->irRecvPin};
-    irrecv->enableIRIn();
-    irsend->begin();
+    irSend = new IRsend{this->irTransPin};
+    irRecv = new IRrecv{this->irRecvPin};
+    irRecv->enableIRIn();
+    irSend->begin();
 }
 
-int IR::irRecive(uint16_t* getData)
+int IR::irRecive()
 {
     decode_results results;
-    if(irrecv->decode(&results)) {
-        getData = resultToRawArray(&results);
-        int length = getCorrectedRawLength(&results);
-        irrecv->resume();
-        return length;
+    if(irRecv->decode(&results))
+    {
+        reciveData = resultToRawArray(&results);
+        reciveDataLength = getCorrectedRawLength(&results);
+        irRecv->resume();
+        return 0;
     }
     else
         return -1;
@@ -24,5 +25,16 @@ int IR::irRecive(uint16_t* getData)
 
 void IR::irTransmit(uint16_t* sendData, uint16_t len)
 {
-    irsend->sendRaw(sendData, len, this->irFrequency);
+    irSend->sendRaw(sendData, len, this->irFrequency);
+}
+
+uint16_t IR::getReciveDataLength(void)
+{
+    return reciveDataLength;
+}
+
+void IR::getReciveData(uint16_t* getData, uint16_t len)
+{
+    for (int i = 0; i < len; ++i)
+        *(getData+i) = *(reciveData+i);
 }

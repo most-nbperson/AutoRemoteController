@@ -7,37 +7,31 @@
       <config projectName="Software" targetName="Z_DUMMY_TARGET" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="esp_wroom_02" CONFIG_NAME="esp_wroom_02" ENABLED="true" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eb864ff-c847-4211-8f48-a4cfe312d5ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/include/ir.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/ir_Gree.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/ir_Kelvinator.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ir_Gree.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ir_Kelvinator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hardware/AutoRemoteController/AutoRemoteController.PrjPcb" beforeDir="false" afterPath="$PROJECT_DIR$/../Hardware/AutoRemoteController/AutoRemoteController.PrjPcb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hardware/AutoRemoteController/AutoRemoteController.PrjPcbStructure" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hardware/AutoRemoteController/PCB1.PcbDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../Hardware/AutoRemoteController/PCB1.PcbDoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hardware/AutoRemoteController/Project Logs for AutoRemoteController/PCB1 PCB ECO 2021-10-8 22-02-20.LOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hardware/AutoRemoteController/Project Logs for AutoRemoteController/PCB1 PCB ECO 2021-10-8 22-08-52.LOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hardware/AutoRemoteController/Project Logs for AutoRemoteController/Sheet1 SCH ECO 2021-10-8 21-52-25.LOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hardware/AutoRemoteController/Project Logs for AutoRemoteController/Sheet1 SCH ECO 2021-10-8 22-08-45.LOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Hardware/AutoRemoteController/Sheet1.SchDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../Hardware/AutoRemoteController/Sheet1.SchDoc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Hardware/AutoRemoteController/__Previews/Sheet1.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../Hardware/AutoRemoteController/__Previews/Sheet1.SchDocPreview" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/i2c.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/i2c.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/key.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/key.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/ssd1306.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/ssd1306.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/i2c.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/i2c.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/key.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/key.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/ir.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/ir.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ssd1306.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ssd1306.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/untitled.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/include/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/lib/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/platformio.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/src/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/test/README" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,12 +46,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1zAhkdpQs7JsBmcXV3ZjHiNoYYJ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
@@ -67,12 +64,12 @@
     <property name="cmake.loaded.for.project" value="true" />
   </component>
   <component name="RunManager" selected="PlatformIO.PlatformIO Upload">
-    <configuration name="Z_DUMMY_TARGET" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Software" TARGET_NAME="Z_DUMMY_TARGET" CONFIG_NAME="esp_wroom_02" RUN_TARGET_PROJECT_NAME="Software" RUN_TARGET_NAME="Z_DUMMY_TARGET">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Z_DUMMY_TARGET" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Software" TARGET_NAME="Z_DUMMY_TARGET" CONFIG_NAME="esp_wroom_02" RUN_TARGET_PROJECT_NAME="Software" RUN_TARGET_NAME="Z_DUMMY_TARGET">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -108,6 +105,8 @@
       <updated>1633596943767</updated>
       <workItem from="1633596944939" duration="537000" />
       <workItem from="1633680671667" duration="6661000" />
+      <workItem from="1633747448265" duration="231000" />
+      <workItem from="1633784482700" duration="5309000" />
     </task>
     <servers />
   </component>
@@ -124,5 +123,9 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
